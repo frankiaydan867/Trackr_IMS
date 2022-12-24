@@ -1,0 +1,6 @@
+
+tmp/
+
+vendor/
+
+app/config/config.ini
