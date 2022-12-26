@@ -4,6 +4,9 @@
 class Setup
 {
 
+
+
+
     function beforeroute()
     {
         echo \Template::instance()->render('_header.html');
@@ -11,7 +14,7 @@ class Setup
 
     function afterroute()
     {
-        echo \Template::instance()->render('_footer.html');
+        //echo \Template::instance()->render('_footer.html');
     }
 
     function index()
