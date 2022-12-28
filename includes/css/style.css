@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap");
 :root {
   --header-height: 3rem;
-  --nav-width: 68px;
+  --nav-width: 4rem;
   --first-color: #2b2b2b;
   --first-color-light: #d4d4d4;
   --white-color: #f3f3f3;
@@ -131,8 +131,9 @@ a {
 @media screen and (min-width: 768px) {
   body {
     margin: calc(var(--header-height) + 0.5rem) 0 0 0;
-    padding-left: calc(var(--nav-width) + 0.5rem);
+    padding-left: calc(var(--nav-width) + 1rem);
     padding-top: 1rem;
+    max-width: calc(100vw - var(--nav-width));
   }
   .header {
     height: calc(var(--header-height) + 1rem);
@@ -150,9 +151,9 @@ a {
     padding: 1rem 1rem 0 0;
   }
   .show {
-    width: calc(var(--nav-width) + 156px);
+    width: calc(var(--nav-width) + 9rem);
   }
   .body-pd {
-    padding-left: calc(var(--nav-width) + 168px);
+    padding-left: calc(var(--nav-width) + 11rem);
   }
 }
