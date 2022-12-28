@@ -9,12 +9,10 @@ class Setup
 
     function beforeroute()
     {
-        echo \Template::instance()->render('_header.html');
     }
 
     function afterroute()
     {
-        //echo \Template::instance()->render('_footer.html');
     }
 
     function index()
@@ -27,13 +25,14 @@ class Setup
     {
         $f3 = \Base::instance();
         User::setup();
-        $f3->reroute('@home');
+        Vendor::setup();
+        $f3->reroute('@setup');
     }
 
     function nukeDB()
     {
         $f3 = \Base::instance();
         User::setdown();
-        $f3->reroute('@home');
+        $f3->reroute('@setup');
     }
 }

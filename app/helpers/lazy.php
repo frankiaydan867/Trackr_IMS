@@ -4,6 +4,6 @@ class Lazy
 {
     function minify()
     {
-        echo Web::instance()->minify('main.js', null, true, null);
+        echo Web::instance()->minify(['main.js', 'script.js'], null, true, null);
     }
 }

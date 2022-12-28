@@ -23,6 +23,7 @@ class User extends \DB\Cortex
                 'type' => 'DATETIME'
             ]
         ],
+
         $db = 'DB',
         $table = 'users',
         $primary = 'id';

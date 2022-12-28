@@ -21,7 +21,7 @@ class Main
     function beforeroute()
     {
         $this->f3->set('page', $this->page);
-        echo \Template::instance()->render('_header.html', 'text/html');
+        // echo \Template::instance()->render('_header.html', 'text/html');
     }
 
     function afterroute()
@@ -29,7 +29,6 @@ class Main
         $this->endTime = hrtime(true);
         $this->totalTime = ($this->endTime - $this->startTime);
         $this->f3->set('executionTime', $this->totalTime);
-        echo \Template::instance()->render('_footer.html', 'text/html');
     }
 
     function index()
