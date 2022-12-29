@@ -37,7 +37,7 @@ class Vendor extends \DB\Cortex
             'email' => [
                 'type' => 'VARCHAR128'
             ],
-            'URL' => [
+            'url' => [
                 'type' => 'VARCHAR256'
             ],
             'notes' => [

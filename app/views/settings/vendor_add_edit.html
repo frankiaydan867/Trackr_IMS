@@ -1,0 +1,104 @@
+<include href="_header.html"/>
+
+<div class="">
+    <h4>{{@page}}</h4>
+    <hr>
+
+    <div class="container border rounded shadow-lg bg-dark p-4 mt-3">
+        <h4>{{@action === 'add' ? 'Create New Vendor' : 'Edit Vendor'}}</h4>
+        <!-- Form -->
+        <form action="{{@action === 'add'?@BASE.@ALIASES.addVendor:@BASE.@ALIASES.editVendor}}" method="post">
+            <div class="form-group">
+
+                <!-- Vendor Name -->
+                <div class="mb-3">
+                    <label for="name" class="form-label">Vendor Name: <sup class="text-danger">*</sup></label>
+                    <input type="text" name="name" class="form-control form-control-sm" value="{{@action === 'edit' ? @vendor.name : ''}}" required>
+                </div>
+                <div class="row">
+                    <div class="col-12 col-md-6">
+                        <!-- Address 1 -->
+                        <div class="mb-3">
+                            <label for="address_1" class="form-label">Address 1:</label>
+                            <input type="text" name="address_1" class="form-control form-control-sm" value="{{@action === 'edit' ? @vendor.address_1 : ''}}">
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <!-- Address 2 -->
+                        <div class="mb-3">
+                            <label for="address_2" class="form-label">Address 2:</label>
+                            <input type="text" name="address_2" class="form-control form-control-sm" value="{{@action === 'edit' ? @vendor.address_2 : ''}}">
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="row">
+                    <div class="col-12 col-md-5">
+                        <!-- City -->
+                        <div class="mb-3">
+                            <label for="city" class="form-label">City:</label>
+                            <input type="text" name="city" class="form-control form-control-sm" value="{{@action === 'edit' ? @vendor.city : ''}}">
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-5">
+                        <!-- State -->
+                        <div class="mb-3">
+                            <label for="state" class="form-label">State:</label>
+                            <input type="text" name="state" class="form-control form-control-sm" value="{{@action === 'edit' ? @vendor.state : ''}}">
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-2">
+                        <!-- Zip -->
+                        <div class="mb-3">
+                            <label for="zip" class="form-label">Zip:</label>
+                            <input type="text" name="zip" class="form-control form-control-sm" value="{{@action === 'edit' ? @vendor.zip : ''}}">
+                        </div>
+                    </div>
+                </div>
+                <!-- Contact Name -->
+                <div class="mb-3">
+                    <label for="contact_name" class="form-label">Contact Name:</label>
+                    <input type="text" name="contact_name" class="form-control form-control-sm" value="{{@action === 'edit' ? @vendor.contact_name : ''}}">
+                </div>
+                <div class="row">
+                    <div class="col-12 col-md-6">
+                        <!-- Phone -->
+                        <div class="mb-3">
+                            <label for="phone" class="form-label">Phone:</label>
+                            <input type="text" name="phone" class="form-control form-control-sm" value="{{@action === 'edit' ? @vendor.phone : ''}}">
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <!-- Email -->
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email:</label>
+                            <input type="email" name="email" class="form-control form-control-sm" value="{{@action === 'edit' ? @vendor.email : ''}}">
+                        </div>
+                    </div>
+                </div>
+                <!-- URL -->
+                <div class="mb-3">
+                    <label for="url" class="form-label">URL:</label>
+                    <input type="text" name="url" class="form-control form-control-sm" value="{{@action === 'edit' ? @vendor.url : ''}}">
+                </div>
+                <!-- Notes -->
+                <div class="mb-3">
+                    <label for="notes" class="form-label">Notes:</label>
+                    <textarea type="text" name="notes" rows="5" cols="5" class="form-control form-control-sm">{{@action === 'edit' ? @vendor.notes : ''}}</textarea>
+                </div>
+                <!-- Image -->
+                <div class="mb-3">
+                    <label for="image" class="form-label">Upload Image:</label>
+                    <input type="file" name="image" class="form-control form-control-sm">
+
+                    <!-- Logic to show image goes here -->
+                </div>                
+                <!-- Submit -->
+                <div class="text-center">
+                    <button type="submit" class="btn btn-primary">{{@action === 'add' ? 'Create' : 'Update'}}</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+<include href="_footer.html"/>

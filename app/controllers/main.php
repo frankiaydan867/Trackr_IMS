@@ -35,6 +35,7 @@ class Main
 
     function settings()
     {
+        $this->f3->set('page', 'Settings');
         echo \Template::instance()->render('settings/_settings.html', 'text/html');
     }
 }

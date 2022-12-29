@@ -1,10 +1,35 @@
 <include href="_header.html"/> 
 
 <div class="">
-    <h4>{{@page}}</h4>
+    <div class="d-flex justify-content-between align-items-center">
+        <span class="fs-4">{{@page}}</span>
+        <a href="{{@BASE.@ALIASES.addVendor}}" class="btn btn-sm btn-primary"><i class="bx bxs-plus-circle me-2 pt-1"></i>Create Vendor</a>
+    </div>
+    
     <hr>
 
-    Vendor page stuff....
+    <table class="table table-dark table-sm table-bordered table-striped text-light">
+        <thead>
+            <tr>
+                <th class="text-center" width="5%">ID</th>
+                <th>Vendor</th>
+                <th width="10%">Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <repeat group="{{@vendors}}" value="{{@vendor}}">
+                <tr>
+                    <td class="text-center">{{@vendor.id}}</td>
+                    <td>{{@vendor.name}}</td>
+                    <td >
+                        <a class="badge text-bg-primary" href="{{@BASE}}/settings/vendor/edit/{{@vendor.id}}">Edit</a>
+                        <a class="badge text-bg-danger" href="{{@BASE}}/settings/vendor/delete/{{@vendor.id}}">Delete</a>
+                    </td>
+                </tr>
+            </repeat>
+        </tbody>
+
+    </table>
 </div>
 
 <include href="_footer.html"/>

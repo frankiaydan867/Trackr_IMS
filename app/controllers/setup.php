@@ -33,6 +33,7 @@ class Setup
     {
         $f3 = \Base::instance();
         User::setdown();
+        Vendor::setdown();
         $f3->reroute('@setup');
     }
 }
