@@ -2,8 +2,8 @@
 :root {
   --header-height: 3rem;
   --nav-width: 4rem;
-  --first-color: #2b2b2b;
-  --first-color-light: #d4d4d4;
+  --first-color: #212529;
+  --first-color-light: #e7dbdb;
   --white-color: #f3f3f3;
   --body-font: "Nunito", sans-serif;
   --normal-font-size: 1rem;
@@ -24,7 +24,7 @@ body {
   font-family: var(--body-font);
   font-size: var(--normal-font-size);
   transition: 0.5s;
-  background-color: rgb(65, 65, 65);
+  background-color: #373b41;
   color: white;
 }
 a {

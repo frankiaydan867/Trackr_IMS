@@ -7,7 +7,7 @@ $f3->config('app/config/config.ini');
 $f3->config('app/config/routes.ini');
 date_default_timezone_set('America/New_York');
 
-// echo gethostbyname("www.google.com");
+
 
 /**
  * DB Instance
